@@ -852,5 +852,143 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
     }
+    const firstName =
+    document.getElementById("firstName");
 
+const lastName =
+    document.getElementById("lastName");
+
+const email =
+    document.getElementById("email");
+
+const phone =
+    document.getElementById("phone");
+
+const bio =
+    document.getElementById("bio");
+
+const saveProfile1 =
+    document.getElementById("saveProfile");
+
+
+if (saveProfile) {
+
+    saveProfile.addEventListener(
+        "click",
+        function (event) {
+
+            event.preventDefault();
+
+
+            const fields = [
+                firstName,
+                lastName,
+                email,
+                phone,
+                bio
+            ];
+
+
+            let valid = true;
+
+
+            fields.forEach(function (field) {
+
+                if (!field) {
+                    return;
+                }
+
+
+                field.classList.remove(
+                    "settings-invalid"
+                );
+
+
+                if (
+                    field.value.trim() === ""
+                ) {
+
+                    field.classList.add(
+                        "settings-invalid"
+                    );
+
+                    valid = false;
+
+                }
+
+            });
+
+
+            if (!valid) {
+
+                if (
+                    typeof gsap !== "undefined"
+                ) {
+
+                    gsap.fromTo(
+                        ".settings-form",
+                        {
+                            x: -5
+                        },
+                        {
+                            x: 5,
+                            duration: 0.08,
+                            repeat: 5,
+                            yoyo: true,
+                            clearProps: "x"
+                        }
+                    );
+
+                }
+
+                return;
+
+            }
+
+
+            const emailPattern =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+            if (
+                !emailPattern.test(
+                    email.value.trim()
+                )
+            ) {
+
+                email.classList.add(
+                    "settings-invalid"
+                );
+
+                return;
+
+            }
+
+
+            const phonePattern =
+                /^[0-9+\-\s()]{10,16}$/;
+
+
+            if (
+                !phonePattern.test(
+                    phone.value.trim()
+                )
+            ) {
+
+                phone.classList.add(
+                    "settings-invalid"
+                );
+
+                return;
+
+            }
+
+
+            window.location.href =
+                "error.html";
+
+        }
+    );
+
+}
 });
