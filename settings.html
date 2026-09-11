@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Stackly Account Settings"
+    >
+
+    <title>Stackly | Settings</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <link
+        rel="stylesheet"
+        href="settings.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="settings-wrapper">
+
+
+    <aside
+        class="settings-sidebar"
+        id="settingsSidebar"
+    >
+
+        <div class="settings-sidebar-logo">
+
+            <a href="user-dashboard.html">
+
+                <img
+                    src="Assest/whitelogo.webp"
+                    alt="Stackly Logo"
+                >
+
+            </a>
+
+        </div>
+
+
+        <div class="settings-sidebar-user">
+
+            <div class="settings-sidebar-avatar">
+
+                <i class="bi bi-person-fill"></i>
+
+            </div>
+
+            <div class="settings-sidebar-user-info">
+
+                <strong id="sidebarUserName">
+                    User
+                </strong>
+
+                <span>
+                    Stackly User
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="settings-sidebar-title">
+            MY ACCOUNT
+        </div>
+
+
+        <nav class="settings-sidebar-nav">
+
+            <a
+                href="user-dashboard.html"
+                class="settings-sidebar-link"
+            >
+
+                <i class="bi bi-grid-1x2-fill"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="eventpage.html"
+                class="settings-sidebar-link"
+            >
+
+                <i class="bi bi-calendar-event"></i>
+
+                <span>
+                    My Events
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="settings-sidebar-title">
+            ACCOUNT
+        </div>
+
+
+        <nav class="settings-sidebar-nav">
+
+            <a
+                href="settings.html"
+                class="settings-sidebar-link active"
+            >
+
+                <i class="bi bi-gear-fill"></i>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="settings-sidebar-bottom">
+
+            <a
+                href="login.html"
+                class="settings-sidebar-link"
+                id="logoutButton"
+            >
+
+                <i class="bi bi-box-arrow-right"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <div
+        class="settings-sidebar-overlay"
+        id="settingsSidebarOverlay"
+    ></div>
+
+
+    <main class="settings-main">
+
+
+        <header class="settings-header">
+
+            <div class="settings-header-left">
+
+                <button
+                    type="button"
+                    class="settings-mobile-menu"
+                    id="settingsMobileMenu"
+                    aria-label="Open navigation"
+                    aria-expanded="false"
+                >
+
+                    <i class="bi bi-list"></i>
+
+                </button>
+
+
+                <a
+                    href="user-dashboard.html"
+                    class="settings-mobile-logo"
+                >
+
+                    <img
+                        src="Assest/whitelogo.webp"
+                        alt="Stackly Logo"
+                    >
+
+                </a>
+
+
+                <div class="settings-page-title">
+
+                    <span>
+                        MY ACCOUNT
+                    </span>
+
+                    <h1>
+                        Settings
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="settings-header-actions">
+
+                <a
+                    href="error.html"
+                    class="settings-header-icon"
+                    aria-label="Search"
+                >
+
+                    <i class="bi bi-search"></i>
+
+                </a>
+
+
+                <a
+                    href="error.html"
+                    class="settings-header-icon settings-notification"
+                    aria-label="Notifications"
+                >
+
+                    <i class="bi bi-bell"></i>
+
+                    <span></span>
+
+                </a>
+
+
+                <a
+                    href="error.html"
+                    class="settings-header-user"
+                >
+
+                    <div class="settings-header-avatar">
+
+                        <i class="bi bi-person-fill"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong id="headerUserName">
+                            User
+                        </strong>
+
+                        <small>
+                            User Account
+                        </small>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <div class="settings-content">
+
+
+            <section class="settings-intro">
+
+                <div>
+
+                    <span class="settings-eyebrow">
+
+                        <i class="bi bi-sliders2"></i>
+
+                        ACCOUNT PREFERENCES
+
+                    </span>
+
+
+                    <h2>
+                        Manage Your
+                        <span>Settings.</span>
+                    </h2>
+
+
+                    <p>
+                        Customize your Stackly account,
+                        notifications and preferences so
+                        everything works the way you want.
+                    </p>
+
+                </div>
+
+
+                <div class="settings-intro-icon">
+
+                    <i class="bi bi-gear-wide-connected"></i>
+
+                </div>
+
+            </section>
+
+
+            <section class="settings-layout">
+
+
+                <div class="settings-navigation">
+
+                    <div class="settings-nav-heading">
+                        SETTINGS
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="settings-nav-item active"
+                        data-target="profileSettings"
+                    >
+
+                        <span class="settings-nav-icon">
+                            <i class="bi bi-person"></i>
+                        </span>
+
+                        <span>
+                            Profile
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="settings-nav-item"
+                        data-target="notificationSettings"
+                    >
+
+                        <span class="settings-nav-icon">
+                            <i class="bi bi-bell"></i>
+                        </span>
+
+                        <span>
+                            Notifications
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="settings-nav-item"
+                        data-target="appearanceSettings"
+                    >
+
+                        <span class="settings-nav-icon">
+                            <i class="bi bi-palette"></i>
+                        </span>
+
+                        <span>
+                            Appearance
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="settings-nav-item"
+                        data-target="securitySettings"
+                    >
+
+                        <span class="settings-nav-icon">
+                            <i class="bi bi-shield-lock"></i>
+                        </span>
+
+                        <span>
+                            Security
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <div class="settings-panels">
+
+
+                    <section
+                        class="settings-panel active"
+                        id="profileSettings"
+                    >
+
+                        <div class="settings-panel-heading">
+
+                            <div>
+
+                                <span>
+                                    PROFILE
+                                </span>
+
+                                <h3>
+                                    Personal Information
+                                </h3>
+
+                            </div>
+
+                            <div class="settings-panel-icon">
+
+                                <i class="bi bi-person"></i>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-form">
+
+
+                            <div class="settings-form-row">
+
+
+                                <div class="settings-field">
+
+                                    <label for="firstName">
+                                        First Name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="firstName"
+                                        placeholder="Enter first name"
+                                    >
+
+                                </div>
+
+
+                                <div class="settings-field">
+
+                                    <label for="lastName">
+                                        Last Name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="lastName"
+                                        placeholder="Enter last name"
+                                    >
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="settings-field">
+
+                                <label for="email">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    placeholder="Enter email address"
+                                >
+
+                            </div>
+
+
+                            <div class="settings-field">
+
+                                <label for="phone">
+                                    Phone Number
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    placeholder="Enter phone number"
+                                >
+
+                            </div>
+
+
+                            <div class="settings-field">
+
+                                <label for="bio">
+                                    About You
+                                </label>
+
+                                <textarea
+                                    id="bio"
+                                    rows="4"
+                                    placeholder="Tell us a little about yourself"
+                                ></textarea>
+
+                            </div>
+
+
+                            <div class="settings-form-actions">
+
+                                <a href="error.html"
+                                    class="settings-save-button"
+                                    id="saveProfile"
+                                >
+
+                                    Save Changes
+
+                                    <i class="bi bi-check2"></i>
+
+                            </a>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <section
+                        class="settings-panel"
+                        id="notificationSettings"
+                    >
+
+                        <div class="settings-panel-heading">
+
+                            <div>
+
+                                <span>
+                                    NOTIFICATIONS
+                                </span>
+
+                                <h3>
+                                    Notification Preferences
+                                </h3>
+
+                            </div>
+
+                            <div class="settings-panel-icon">
+
+                                <i class="bi bi-bell"></i>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-preference-list">
+
+
+                            <div class="settings-preference-row">
+
+                                <div class="settings-preference-content">
+
+                                    <strong>
+                                        Email Notifications
+                                    </strong>
+
+                                    <span>
+                                        Receive important event and account updates.
+                                    </span>
+
+                                </div>
+
+
+                                <label class="settings-toggle">
+
+                                    <input
+                                        type="checkbox"
+                                        id="emailNotifications"
+                                        checked
+                                    >
+
+                                    <span></span>
+
+                                </label>
+
+                            </div>
+
+
+                            <div class="settings-preference-row">
+
+                                <div class="settings-preference-content">
+
+                                    <strong>
+                                        Event Reminders
+                                    </strong>
+
+                                    <span>
+                                        Get reminders before your registered events.
+                                    </span>
+
+                                </div>
+
+
+                                <label class="settings-toggle">
+
+                                    <input
+                                        type="checkbox"
+                                        id="eventReminders"
+                                        checked
+                                    >
+
+                                    <span></span>
+
+                                </label>
+
+                            </div>
+
+
+                            <div class="settings-preference-row">
+
+                                <div class="settings-preference-content">
+
+                                    <strong>
+                                        New Event Alerts
+                                    </strong>
+
+                                    <span>
+                                        Discover newly added conferences and workshops.
+                                    </span>
+
+                                </div>
+
+
+                                <label class="settings-toggle">
+
+                                    <input
+                                        type="checkbox"
+                                        id="newEventAlerts"
+                                        checked
+                                    >
+
+                                    <span></span>
+
+                                </label>
+
+                            </div>
+
+
+                            <div class="settings-preference-row">
+
+                                <div class="settings-preference-content">
+
+                                    <strong>
+                                        Weekly Summary
+                                    </strong>
+
+                                    <span>
+                                        Receive a weekly overview of upcoming experiences.
+                                    </span>
+
+                                </div>
+
+
+                                <label class="settings-toggle">
+
+                                    <input
+                                        type="checkbox"
+                                        id="weeklySummary"
+                                    >
+
+                                    <span></span>
+
+                                </label>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="settings-form-actions">
+
+                            <a href="error.html"
+                                class="settings-save-button"
+                                id="saveNotifications"
+                            >
+
+                                Save Preferences
+
+                                <i class="bi bi-check2"></i>
+
+                        </a>
+
+                        </div>
+
+                    </section>
+
+
+                    <section
+                        class="settings-panel"
+                        id="appearanceSettings"
+                    >
+
+                        <div class="settings-panel-heading">
+
+                            <div>
+
+                                <span>
+                                    APPEARANCE
+                                </span>
+
+                                <h3>
+                                    Display Preferences
+                                </h3>
+
+                            </div>
+
+                            <div class="settings-panel-icon">
+
+                                <i class="bi bi-palette"></i>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-appearance-options">
+
+
+                            <button
+                                type="button"
+                                class="appearance-option active"
+                                data-theme="light"
+                            >
+
+                                <span class="appearance-preview light-preview">
+
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+
+                                </span>
+
+                                <strong>
+                                    Light
+                                </strong>
+
+                                <small>
+                                    Clean and bright interface
+                                </small>
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="appearance-option"
+                                data-theme="soft"
+                            >
+
+                                <span class="appearance-preview soft-preview">
+
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+
+                                </span>
+
+                                <strong>
+                                    Soft
+                                </strong>
+
+                                <small>
+                                    Softer background contrast
+                                </small>
+
+                            </button>
+
+
+                        </div>
+
+
+                        <div class="settings-form-actions">
+<a
+    href="error.html"
+    class="settings-save-button"
+    id="saveAppearance"
+>
+    Save Appearance
+    <i class="bi bi-check2"></i>
+</a>
+
+                        </div>
+
+                    </section>
+
+
+                    <section
+                        class="settings-panel"
+                        id="securitySettings"
+                    >
+
+                        <div class="settings-panel-heading">
+
+                            <div>
+
+                                <span>
+                                    SECURITY
+                                </span>
+
+                                <h3>
+                                    Account Security
+                                </h3>
+
+                            </div>
+
+                            <div class="settings-panel-icon">
+
+                                <i class="bi bi-shield-lock"></i>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-security-card">
+
+                            <div class="settings-security-icon">
+
+                                <i class="bi bi-lock"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Password
+                                </strong>
+
+                                <span>
+                                    Keep your account protected with a strong password.
+                                </span>
+
+                            </div>
+
+                            <a
+                                href="error.html"
+                                class="settings-secondary-button"
+                            >
+                                Change Password
+                            </a>
+
+                        </div>
+
+
+                        <div class="settings-security-card">
+
+                            <div class="settings-security-icon">
+
+                                <i class="bi bi-phone"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Two-Factor Authentication
+                                </strong>
+
+                                <span>
+                                    Add another layer of protection to your account.
+                                </span>
+
+                            </div>
+
+                            <a href="error.html"
+                                class="settings-secondary-button"
+                                id="twoFactorButton"
+                            >
+                                Enable
+                        </a>
+
+                        </div>
+
+
+                        <div class="settings-danger-zone">
+
+                            <div>
+
+                                <span>
+                                    ACCOUNT ACTION
+                                </span>
+
+                                <h4>
+                                    Sign out from all devices
+                                </h4>
+
+                                <p>
+                                    End all active sessions connected to your account.
+                                </p>
+
+                            </div>
+
+
+                            <a href="error.html"
+                                class="settings-danger-button"
+                                id="signOutAll"
+                            >
+                                Sign Out
+                        </a>
+
+                        </div>
+
+                    </section>
+
+
+                </div>
+
+            </section>
+
+
+            <div
+                class="settings-toast"
+                id="settingsToast"
+            >
+
+                <i class="bi bi-check-circle-fill"></i>
+
+                <span>
+                    Settings saved successfully.
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="settings.js"></script>
+
+</body>
+
+</html>

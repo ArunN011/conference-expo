@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Stackly Events"
+    >
+
+    <title>Stackly | Events</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <link
+        rel="stylesheet"
+        href="eventpage.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="events-wrapper">
+
+
+    <aside
+        class="events-sidebar"
+        id="eventsSidebar"
+    >
+
+        <div class="events-sidebar-logo">
+
+            <a href="user-dashboard.html">
+
+                <img
+                    src="Assest/whitelogo.webp"
+                    alt="Stackly Logo"
+                >
+
+            </a>
+
+        </div>
+
+
+        <div class="events-sidebar-user">
+
+            <div class="events-sidebar-avatar">
+
+                <i class="bi bi-person-fill"></i>
+
+            </div>
+
+            <div class="events-sidebar-user-info">
+
+                <strong id="sidebarUserName">
+                    User
+                </strong>
+
+                <span>
+                    Stackly User
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="events-sidebar-title">
+            MY ACCOUNT
+        </div>
+
+
+        <nav class="events-sidebar-nav">
+
+            <a
+                href="user-dashboard.html"
+                class="events-sidebar-link"
+            >
+
+                <i class="bi bi-grid-1x2-fill"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="eventpage.html"
+                class="events-sidebar-link active"
+            >
+
+                <i class="bi bi-calendar-event"></i>
+
+                <span>
+                    My Events
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="events-sidebar-title">
+            ACCOUNT
+        </div>
+
+
+        <nav class="events-sidebar-nav">
+
+            <a
+                href="settings.html"
+                class="events-sidebar-link"
+            >
+
+                <i class="bi bi-gear"></i>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="events-sidebar-bottom">
+
+            <a
+                href="login.html"
+                class="events-sidebar-link"
+                id="logoutButton"
+            >
+
+                <i class="bi bi-box-arrow-right"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <div
+        class="events-sidebar-overlay"
+        id="eventsSidebarOverlay"
+    ></div>
+
+
+    <main class="events-main">
+
+
+        <header class="events-header">
+
+            <div class="events-header-left">
+
+                <button
+                    type="button"
+                    class="events-mobile-menu"
+                    id="eventsMobileMenu"
+                    aria-label="Open navigation"
+                    aria-expanded="false"
+                >
+
+                    <i class="bi bi-list"></i>
+
+                </button>
+
+
+                <a
+                    href="user-dashboard.html"
+                    class="events-mobile-logo"
+                >
+
+                    <img
+                        src="Assest/whitelogo.webp"
+                        alt="Stackly Logo"
+                    >
+
+                </a>
+
+
+                <div class="events-page-title">
+
+                    <span>
+                        MY ACCOUNT
+                    </span>
+
+                    <h1>
+                        Events
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="events-header-actions">
+
+                <a
+                    href="error.html"
+                    class="events-header-action"
+                    aria-label="Search"
+                >
+
+                    <i class="bi bi-search"></i>
+
+                </a>
+
+
+                <a
+                    href="error.html"
+                    class="events-header-action events-notification"
+                    aria-label="Notifications"
+                >
+
+                    <i class="bi bi-bell"></i>
+
+                    <span></span>
+
+                </a>
+
+
+                <a
+                    href="error.html"
+                    class="events-header-profile"
+                >
+
+                    <div class="events-header-avatar">
+
+                        <i class="bi bi-person-fill"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong id="headerUserName">
+                            User
+                        </strong>
+
+                        <small>
+                            User Account
+                        </small>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <div class="events-content">
+
+
+            <section class="events-intro">
+
+                <div class="events-intro-content">
+
+                    <span class="events-eyebrow">
+
+                        <i class="bi bi-stars"></i>
+
+                        DISCOVER WHAT'S NEXT
+
+                    </span>
+
+
+                    <h2>
+
+                        Explore Events That
+
+                        <span>
+                            Move You Forward.
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        Discover conferences, workshops,
+                        networking sessions and experiences
+                        designed to connect you with the right
+                        people and ideas.
+
+                    </p>
+
+                </div>
+
+
+                <div class="events-total-card">
+
+                    <div class="events-total-icon">
+
+                        <i class="bi bi-calendar-event"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            24
+                        </strong>
+
+                        <span>
+                            Upcoming Events
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="events-toolbar">
+
+                <div class="events-search">
+
+                    <i class="bi bi-search"></i>
+
+                    <input
+                        type="search"
+                        id="eventSearch"
+                        placeholder="Search events..."
+                        aria-label="Search events"
+                    >
+
+                </div>
+
+
+                <div class="events-filters">
+
+                    <button
+                        type="button"
+                        class="events-filter active"
+                        data-filter="all"
+                    >
+                        All Events
+                    </button>
+
+                    <button
+                        type="button"
+                        class="events-filter"
+                        data-filter="conference"
+                    >
+                        Conferences
+                    </button>
+
+                    <button
+                        type="button"
+                        class="events-filter"
+                        data-filter="workshop"
+                    >
+                        Workshops
+                    </button>
+
+                    <button
+                        type="button"
+                        class="events-filter"
+                        data-filter="networking"
+                    >
+                        Networking
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <section class="events-section">
+
+                <div class="events-section-heading">
+
+                    <div>
+
+                        <span>
+                            FEATURED EVENT
+                        </span>
+
+                        <h3>
+                            Don't Miss What Matters
+                        </h3>
+
+                    </div>
+
+                    <a
+                        href="error.html"
+                        class="events-view-link"
+                    >
+                        View All
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <article
+                    class="featured-event"
+                    data-category="conference"
+                    data-title="global technology summit 2026"
+                >
+
+                    <div class="featured-event-content">
+
+                        <div class="featured-event-top">
+
+                            <span class="featured-tag">
+                                FEATURED
+                            </span>
+
+                            <span class="featured-date">
+                                SEPTEMBER 28, 2026
+                            </span>
+
+                        </div>
+
+
+                        <h2>
+                            Global Technology Summit 2026
+                        </h2>
+
+
+                        <p>
+
+                            A high-energy gathering of technology
+                            leaders, innovators and entrepreneurs
+                            shaping the next generation of digital
+                            experiences.
+
+                        </p>
+
+
+                        <div class="featured-details">
+
+                            <span>
+
+                                <i class="bi bi-calendar3"></i>
+
+                                September 28, 2026
+
+                            </span>
+
+
+                            <span>
+
+                                <i class="bi bi-clock"></i>
+
+                                10:30 AM
+
+                            </span>
+
+
+                            <span>
+
+                                <i class="bi bi-geo-alt"></i>
+
+                                Bengaluru
+
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="error.html"
+                            class="events-primary-button"
+                        >
+
+                            View Event
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="featured-event-visual">
+
+                        <div class="featured-circle">
+
+                            <i class="bi bi-cpu"></i>
+
+                        </div>
+
+                        <div class="featured-ring"></div>
+
+                        <span>
+                            TECH
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <section class="events-section upcoming-section">
+
+                <div class="events-section-heading">
+
+                    <div>
+
+                        <span>
+                            UPCOMING EVENTS
+                        </span>
+
+                        <h3>
+                            Find Your Next Experience
+                        </h3>
+
+                    </div>
+
+                    <span
+                        class="events-result-count"
+                        id="eventResultCount"
+                    >
+                        6 Events
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="events-grid"
+                    id="eventsGrid"
+                >
+
+
+                    <article
+                        class="event-card"
+                        data-category="conference"
+                        data-title="future finance conference"
+                    >
+
+                        <div class="event-card-top">
+
+                            <div class="event-card-icon">
+
+                                <i class="bi bi-bar-chart-line"></i>
+
+                            </div>
+
+                            <span>
+                                CONFERENCE
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Future Finance Conference
+                        </h3>
+
+
+                        <p>
+                            Explore the future of finance,
+                            fintech infrastructure and digital
+                            transformation.
+                        </p>
+
+
+                        <div class="event-card-info">
+
+                            <span>
+                                <i class="bi bi-calendar3"></i>
+                                Oct 05, 2026
+                            </span>
+
+                            <span>
+                                <i class="bi bi-geo-alt"></i>
+                                Mumbai
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="error.html"
+                            class="event-card-link"
+                        >
+
+                            Explore Event
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <article
+                        class="event-card"
+                        data-category="workshop"
+                        data-title="ai innovation workshop"
+                    >
+
+                        <div class="event-card-top">
+
+                            <div class="event-card-icon">
+
+                                <i class="bi bi-robot"></i>
+
+                            </div>
+
+                            <span>
+                                WORKSHOP
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            AI Innovation Workshop
+                        </h3>
+
+
+                        <p>
+                            Build practical AI strategies and
+                            understand how intelligent systems
+                            are changing modern businesses.
+                        </p>
+
+
+                        <div class="event-card-info">
+
+                            <span>
+                                <i class="bi bi-calendar3"></i>
+                                Oct 12, 2026
+                            </span>
+
+                            <span>
+                                <i class="bi bi-geo-alt"></i>
+                                Chennai
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="error.html"
+                            class="event-card-link"
+                        >
+
+                            Explore Event
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <article
+                        class="event-card"
+                        data-category="networking"
+                        data-title="business networking night"
+                    >
+
+                        <div class="event-card-top">
+
+                            <div class="event-card-icon">
+
+                                <i class="bi bi-people"></i>
+
+                            </div>
+
+                            <span>
+                                NETWORKING
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Business Networking Night
+                        </h3>
+
+
+                        <p>
+                            Meet founders, professionals and
+                            decision makers from growing
+                            businesses and industries.
+                        </p>
+
+
+                        <div class="event-card-info">
+
+                            <span>
+                                <i class="bi bi-calendar3"></i>
+                                Oct 18, 2026
+                            </span>
+
+                            <span>
+                                <i class="bi bi-geo-alt"></i>
+                                Bengaluru
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="error.html"
+                            class="event-card-link"
+                        >
+
+                            Explore Event
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <article
+                        class="event-card"
+                        data-category="conference"
+                        data-title="digital leadership forum"
+                    >
+
+                        <div class="event-card-top">
+
+                            <div class="event-card-icon">
+
+                                <i class="bi bi-person-badge"></i>
+
+                            </div>
+
+                            <span>
+                                CONFERENCE
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Digital Leadership Forum
+                        </h3>
+
+
+                        <p>
+                            Learn from experienced leaders about
+                            strategy, culture, growth and digital
+                            transformation.
+                        </p>
+
+
+                        <div class="event-card-info">
+
+                            <span>
+                                <i class="bi bi-calendar3"></i>
+                                Oct 24, 2026
+                            </span>
+
+                            <span>
+                                <i class="bi bi-geo-alt"></i>
+                                Hyderabad
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="error.html"
+                            class="event-card-link"
+                        >
+
+                            Explore Event
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <article
+                        class="event-card"
+                        data-category="workshop"
+                        data-title="product design masterclass"
+                    >
+
+                        <div class="event-card-top">
+
+                            <div class="event-card-icon">
+
+                                <i class="bi bi-bezier2"></i>
+
+                            </div>
+
+                            <span>
+                                WORKSHOP
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Product Design Masterclass
+                        </h3>
+
+
+                        <p>
+                            Discover user-centered design,
+                            product thinking and practical
+                            experience design techniques.
+                        </p>
+
+
+                        <div class="event-card-info">
+
+                            <span>
+                                <i class="bi bi-calendar3"></i>
+                                Nov 02, 2026
+                            </span>
+
+                            <span>
+                                <i class="bi bi-geo-alt"></i>
+                                Pune
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="error.html"
+                            class="event-card-link"
+                        >
+
+                            Explore Event
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <article
+                        class="event-card"
+                        data-category="networking"
+                        data-title="founders connect 2026"
+                    >
+
+                        <div class="event-card-top">
+
+                            <div class="event-card-icon">
+
+                                <i class="bi bi-rocket-takeoff"></i>
+
+                            </div>
+
+                            <span>
+                                NETWORKING
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Founders Connect 2026
+                        </h3>
+
+
+                        <p>
+                            Connect with ambitious founders,
+                            investors and ecosystem builders
+                            creating what's next.
+                        </p>
+
+
+                        <div class="event-card-info">
+
+                            <span>
+                                <i class="bi bi-calendar3"></i>
+                                Nov 10, 2026
+                            </span>
+
+                            <span>
+                                <i class="bi bi-geo-alt"></i>
+                                Delhi
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="error.html"
+                            class="event-card-link"
+                        >
+
+                            Explore Event
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+                </div>
+
+
+                <div
+                    class="events-empty"
+                    id="eventsEmpty"
+                >
+
+                    <i class="bi bi-search"></i>
+
+                    <h3>
+                        No Events Found
+                    </h3>
+
+                    <p>
+                        Try another search or choose a different category.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="events-cta">
+
+                <div class="events-cta-content">
+
+                    <span>
+                        STAY IN THE LOOP
+                    </span>
+
+                    <h2>
+                        Never Miss an Important Event.
+                    </h2>
+
+                    <p>
+                        Keep exploring conferences, workshops and
+                        networking experiences built for your growth.
+                    </p>
+
+                    <a
+                        href="error.html"
+                        class="events-cta-button"
+                    >
+
+                        Explore More Events
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="events-cta-decoration">
+
+                    <i class="bi bi-calendar2-week"></i>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="eventspage.js"></script>
+
+</body>
+
+</html>

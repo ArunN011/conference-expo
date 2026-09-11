@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Stackly | User Dashboard</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <link
+        rel="stylesheet"
+        href="user.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard-wrapper">
+
+
+    <aside
+        class="dashboard-sidebar"
+        id="dashboardSidebar"
+    >
+
+        <div class="sidebar-logo">
+
+            <a href="user-dashboard.html">
+
+                <img
+                    src="Assest/whitelogo.webp"
+                    alt="Stackly Logo"
+                >
+
+            </a>
+
+        </div>
+
+
+        <div class="sidebar-user">
+
+            <div class="sidebar-user-avatar">
+
+                <i class="bi bi-person-fill"></i>
+
+            </div>
+
+            <div class="sidebar-user-info">
+
+                <strong id="sidebarUserName">
+                    User
+                </strong>
+
+                <span>
+                    Stackly User
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-section-title">
+            MY ACCOUNT
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a
+                href="user-dashboard.html"
+                class="sidebar-link active"
+            >
+
+                <i class="bi bi-grid-1x2-fill"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="eventpage.html"
+                class="sidebar-link"
+            >
+
+                <i class="bi bi-calendar-event"></i>
+
+                <span>
+                    My Events
+                </span>
+
+            </a>
+
+
+
+        </nav>
+
+
+        <div class="sidebar-section-title">
+            ACCOUNT
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+         
+
+
+            <a
+                href="settings.html"
+                class="sidebar-link"
+            >
+
+                <i class="bi bi-gear"></i>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="login.html"
+                class="sidebar-link logout-link"
+                id="logoutButton"
+            >
+
+                <i class="bi bi-box-arrow-right"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <main class="dashboard-main">
+
+
+        <header class="dashboard-header">
+
+
+            <div class="header-left">
+
+
+                <button
+                    type="button"
+                    class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    aria-label="Open navigation"
+                    aria-expanded="false"
+                >
+
+                    <i class="bi bi-list"></i>
+
+                </button>
+
+
+                <a
+                    href="user-dashboard.html"
+                    class="mobile-dashboard-logo"
+                >
+
+                    <img
+                        src="Assest/whitelogo.webp"
+                        alt="Stackly Logo"
+                    >
+
+                </a>
+
+
+                <div class="dashboard-title">
+
+                    <span>
+                        MY ACCOUNT
+                    </span>
+
+                    <h1>
+                        Dashboard
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-header-actions">
+
+
+                <a
+                    href="error.html"
+                    class="header-action"
+                    aria-label="Search"
+                >
+
+                    <i class="bi bi-search"></i>
+
+                </a>
+
+
+                <a
+                    href="error.html"
+                    class="header-action notification-button"
+                    aria-label="Notifications"
+                >
+
+                    <i class="bi bi-bell"></i>
+
+                    <span></span>
+
+                </a>
+
+
+                <a
+                    href="error.html"
+                    class="header-profile"
+                >
+
+                    <div class="header-profile-avatar">
+
+                        <i class="bi bi-person-fill"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong id="headerUserName">
+                            User
+                        </strong>
+
+                        <small>
+                            User Account
+                        </small>
+
+                    </div>
+
+                </a>
+
+
+            </div>
+
+
+        </header>
+
+
+        <div class="dashboard-content">
+
+
+            <section class="welcome-card">
+
+                <div class="welcome-content">
+
+                    <span
+                        class="welcome-date"
+                        id="currentDate"
+                    >
+                        TODAY
+                    </span>
+
+
+                    <h2>
+
+                        Welcome back,
+
+                        <span id="welcomeUser">
+                            User
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        Manage your Stackly events,
+                        tickets, registrations and
+                        account activity from one place.
+
+                    </p>
+
+
+                    <div class="welcome-actions">
+
+                        <a
+                            href="error.html"
+                            class="primary-button"
+                        >
+
+                            Explore Events
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+
+                        <a
+                            href="error.html"
+                            class="secondary-button"
+                        >
+
+                            My Tickets
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="welcome-visual">
+
+                    <div class="event-circle">
+
+                        <i class="bi bi-calendar-event"></i>
+
+                    </div>
+
+                    <div class="event-ring"></div>
+
+                    <span class="vertical-event-text">
+                        EXPERIENCE MORE
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <section class="dashboard-stats">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon red">
+
+                        <i class="bi bi-calendar-event"></i>
+
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Registered Events
+                        </span>
+
+                        <strong>
+                            12
+                        </strong>
+
+                        <small>
+                            This year
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+
+                        <i class="bi bi-ticket-perforated"></i>
+
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Active Tickets
+                        </span>
+
+                        <strong>
+                            04
+                        </strong>
+
+                        <small>
+                            Available
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+
+                        <i class="bi bi-bookmark-star"></i>
+
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Saved Events
+                        </span>
+
+                        <strong>
+                            08
+                        </strong>
+
+                        <small>
+                            In your list
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+
+                        <i class="bi bi-award"></i>
+
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Attended Events
+                        </span>
+
+                        <strong>
+                            03
+                        </strong>
+
+                        <small>
+                            Completed
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+            <br>
+
+
+            <section class="dashboard-grid">
+
+
+                <div class="dashboard-panel">
+
+
+                    <div class="panel-heading">
+
+                        <div>
+
+                            <span>
+                                NEXT EVENT
+                            </span>
+
+                            <h3>
+                                Your Upcoming Event
+                            </h3>
+
+                        </div>
+
+
+                        <a
+                            href="error.html"
+                            class="view-link"
+                        >
+
+                            View All
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="event-main">
+
+
+                        <div class="event-avatar">
+
+                            <i class="bi bi-mic-fill"></i>
+
+                        </div>
+
+
+                        <div class="event-details">
+
+                            <strong>
+                                Stackly Tech Summit
+                            </strong>
+
+                            <span>
+                                Technology & Innovation
+                            </span>
+
+
+                            <div class="event-info">
+
+                                <span>
+
+                                    <i class="bi bi-calendar3"></i>
+
+                                    September 28, 2026
+
+                                </span>
+
+
+                                <span>
+
+                                    <i class="bi bi-clock"></i>
+
+                                    10:30 AM
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="event-countdown">
+
+                        <div>
+
+                            <span>
+                                EVENT STARTS IN
+                            </span>
+
+                            <strong id="eventCountdown">
+                                18d 04h 20m
+                            </strong>
+
+                        </div>
+
+
+                        <a
+                            href="error.html"
+                            class="small-action"
+                        >
+
+                            <i class="bi bi-ticket"></i>
+
+                            View Ticket
+
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="dashboard-panel">
+
+
+                    <div class="panel-heading">
+
+                        <div>
+
+                            <span>
+                                EVENT ACTIVITY
+                            </span>
+
+                            <h3>
+                                Your Activity
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-summary">
+
+
+                        <div class="activity-metric">
+
+                            <div class="metric-icon">
+
+                                <i class="bi bi-people"></i>
+
+                            </div>
+
+                            <strong>
+                                1,240
+                            </strong>
+
+                            <span>
+                                Connections
+                            </span>
+
+                        </div>
+
+
+                        <div class="activity-metric">
+
+                            <div class="metric-icon">
+
+                                <i class="bi bi-clock-history"></i>
+
+                            </div>
+
+                            <strong>
+                                18h
+                            </strong>
+
+                            <span>
+                                Event Time
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-line">
+
+                        <div></div>
+
+                    </div>
+
+
+                    <div class="live-status">
+
+                        <i class="bi bi-circle-fill"></i>
+
+                        Stackly activity updated
+
+                        <span id="liveTime">
+                            just now
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+            <section class="quick-actions-section">
+
+
+                <div class="section-heading">
+
+                    <span>
+                        QUICK ACTIONS
+                    </span>
+
+                    <h3>
+                        Manage Your Events
+                    </h3>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+
+                    <a
+                        href="error.html"
+                        class="quick-action-card"
+                    >
+
+                        <div class="quick-action-icon">
+
+                            <i class="bi bi-calendar-plus"></i>
+
+                        </div>
+
+                        <strong>
+                            Explore Events
+                        </strong>
+
+                        <span>
+                            Find upcoming events
+                        </span>
+
+                        <i class="bi bi-arrow-up-right action-arrow"></i>
+
+                    </a>
+
+
+                    <a
+                        href="error.html"
+                        class="quick-action-card"
+                    >
+
+                        <div class="quick-action-icon">
+
+                            <i class="bi bi-ticket-perforated"></i>
+
+                        </div>
+
+                        <strong>
+                            My Tickets
+                        </strong>
+
+                        <span>
+                            View your registrations
+                        </span>
+
+                        <i class="bi bi-arrow-up-right action-arrow"></i>
+
+                    </a>
+
+
+                    <a
+                        href="error.html"
+                        class="quick-action-card"
+                    >
+
+                        <div class="quick-action-icon">
+
+                            <i class="bi bi-bookmark-star"></i>
+
+                        </div>
+
+                        <strong>
+                            Saved Events
+                        </strong>
+
+                        <span>
+                            Check your saved events
+                        </span>
+
+                        <i class="bi bi-arrow-up-right action-arrow"></i>
+
+                    </a>
+
+
+                    <a
+                        href="error.html"
+                        class="quick-action-card"
+                    >
+
+                        <div class="quick-action-icon">
+
+                            <i class="bi bi-person"></i>
+
+                        </div>
+
+                        <strong>
+                            My Profile
+                        </strong>
+
+                        <span>
+                            Manage your account
+                        </span>
+
+                        <i class="bi bi-arrow-up-right action-arrow"></i>
+
+                    </a>
+
+
+                </div>
+
+            </section>
+<br>
+
+            <section class="dashboard-grid bottom-grid">
+
+
+                <div class="dashboard-panel">
+
+
+                    <div class="panel-heading">
+
+                        <div>
+
+                            <span>
+                                RECENT ACTIVITY
+                            </span>
+
+                            <h3>
+                                Your Event Timeline
+                            </h3>
+
+                        </div>
+
+
+                        <a
+                            href="error.html"
+                            class="view-link"
+                        >
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <div class="activity-list">
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon">
+
+                                <i class="bi bi-ticket-perforated"></i>
+
+                            </div>
+
+                            <div class="activity-info">
+
+                                <strong>
+                                    Event Registered
+                                </strong>
+
+                                <span>
+                                    You registered for Stackly Tech Summit.
+                                </span>
+
+                            </div>
+
+                            <small>
+                                Today
+                            </small>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon">
+
+                                <i class="bi bi-bookmark-star"></i>
+
+                            </div>
+
+                            <div class="activity-info">
+
+                                <strong>
+                                    Event Saved
+                                </strong>
+
+                                <span>
+                                    You saved a new upcoming event.
+                                </span>
+
+                            </div>
+
+                            <small>
+                                2 days ago
+                            </small>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon">
+
+                                <i class="bi bi-person-plus"></i>
+
+                            </div>
+
+                            <div class="activity-info">
+
+                                <strong>
+                                    Profile Updated
+                                </strong>
+
+                                <span>
+                                    Your Stackly profile was updated.
+                                </span>
+
+                            </div>
+
+                            <small>
+                                4 days ago
+                            </small>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="dashboard-panel profile-panel">
+
+
+                    <div class="panel-heading">
+
+                        <div>
+
+                            <span>
+                                ACCOUNT
+                            </span>
+
+                            <h3>
+                                Your Profile
+                            </h3>
+
+                        </div>
+
+
+                        <a
+                            href="error.html"
+                            class="profile-edit"
+                        >
+
+                            <i class="bi bi-pencil"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="profile-summary">
+
+
+                        <div class="large-profile-avatar">
+
+                            <i class="bi bi-person-fill"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong id="profileUserName">
+                                User
+                            </strong>
+
+                            <span id="profileEmail">
+                                user@example.com
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-details">
+
+
+                        <div>
+
+                            <span>
+                                Account Type
+                            </span>
+
+                            <strong id="profileRole">
+                                User
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Member Since
+                            </span>
+
+                            <strong>
+                                September 2026
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <a
+                        href="error.html"
+                        class="profile-button"
+                    >
+
+                        Manage Profile
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+
+    </main>
+
+
+</div>
+
+
+<script src="user.js"></script>
+
+</body>
+
+</html>
