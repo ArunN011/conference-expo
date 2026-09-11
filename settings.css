@@ -1218,6 +1218,10 @@ svg {
 
     transition: .25s ease;
 }
+.settings-invalid {
+    border-color: #df4f62 !important;
+    box-shadow: 0 0 0 3px rgba(223, 79, 98, .08) !important;
+}
 
 .settings-secondary-button:hover {
     border-color: var(--purple);
